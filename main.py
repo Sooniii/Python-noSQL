@@ -45,8 +45,9 @@ def show_users():
 
     return make_response(reponse, 200)
     """
-    ajoute un utilisateur
-    params: newUser(un json avec le nom et le prenom d'un nouvel utilisateur)
+    modifer un utilisateur
+    params: User (un json avec le nom et le prenom d'un utilisateur)
+    return : le json modifer
     """
 
 @app.route("/modifyUser", methods=["PATCH"])
@@ -94,7 +95,6 @@ return: soit le json si tout a fonctionner soit un message d'erreur
 def add_user():
     json = request.get_json()
     index = f"{request.args['id']}"
-
     if os.path.exists("./user/" + index + ".txt") == False:
         file = open("./user/" + index + ".txt", 'x')
         file.write(json['nom'] + "\n" + json['prenom'])
