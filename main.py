@@ -44,10 +44,7 @@ def show_users():
         texte.close()
 
     return make_response(reponse, 200)
-    """
-    ajoute un utilisateur
-    params: newUser(un json avec le nom et le prenom d'un nouvel utilisateur)
-    """
+
 
 @app.route("/modifyUser", methods=["PATCH"])
 def patch_user():
@@ -99,6 +96,7 @@ def add_user():
         file = open("./user/" + index + ".txt", 'x')
         file.write(json['nom'] + "\n" + json['prenom'])
         file.close()
+        name = "l'utilisateur est bien enregistrer"
     else:
         name = "l'utilisateur existe deja"
     return make_response(name, 200)
