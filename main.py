@@ -68,3 +68,21 @@ if (__name__) == '__main__':
         port=8081,
         debug=True,
     )
+
+    """
+    on cherche a modifier un utilisateur
+    params:
+    """
+
+@app.route("/modifyuser", methods=["PATCH"])
+def patch_user():
+
+
+    return
+
+if (__name__) == '__main__':
+    app.run(
+        host="0.0.0.0",
+        port=8081,
+        debug=True,
+    )
