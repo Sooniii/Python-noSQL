@@ -38,8 +38,9 @@ def show_users():
 
     for item in folder:
         texte = open("./user/" + item, 'r')
-        user = texte.readline()
-        reponse = reponse + user
+        name = texte.readline()
+        lastname = texte.readline()
+        reponse = "<p>" + reponse + name + "\n" + lastname + "</p>" + "\n"
         texte.close()
 
     return make_response(reponse, 200)
@@ -63,27 +64,47 @@ def patch_user():
 
 
 
+@app.route("/del_user", methods=["DELETE"])
+def del_user():
+    """ supprimer un user """
+
+    id = f"{request.args['id']}"
+    print("./user/"+id+".txt")
+
+    if os.path.exists("./user/"+id+".txt") == True:
+        os.remove("./user/" +id + ".txt")
+        delete = "Le user " + id + " à été supprimer"
+        print("test 1")
+    else:
+        delete = "le user n'existait pas"
+        print("test 2")
+
+    return make_response(delete,200)
+
+
+
 """
-ajoute un utilisateur
+crée un fichier .txt avec un nouvelle utilisateur
 params: newUser(un json avec le nom et le prenom d'un nouvel utilisateur)
+return: soit le json si tout a fonctionner soit un message d'erreur
 """
 
 
 @app.route("/adduser", methods=["POST"])
 def add_user():
-    name = request.get_json()
+    json = request.get_json()
     index = f"{request.args['id']}"
-    print("./user/"+index+".txt")
-    if os.path.exists("./user/"+index+".txt") == False:
-        file = open("./user/"+index+".txt",'x')
-        file.write(name['nom']+"\n"+name['prenom'])
+
+    if os.path.exists("./user/" + index + ".txt") == False:
+        file = open("./user/" + index + ".txt", 'x')
+        file.write(json['nom'] + "\n" + json['prenom'])
         file.close()
     else:
         name = "l'utilisateur existe deja"
     return make_response(name, 200)
 
 
-if (__name__) == '__main__':
+if __name__ == '__main__':
     app.run(
         host="0.0.0.0",
         port=8081,
