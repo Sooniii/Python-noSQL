@@ -43,6 +43,24 @@ def show_users():
         texte.close()
 
     return make_response(reponse, 200)
+    """
+    ajoute un utilisateur
+    params: newUser(un json avec le nom et le prenom d'un nouvel utilisateur)
+    """
+
+@app.route("/modifyUser", methods=["PATCH"])
+def patch_user():
+    name = request.get_json()
+    index = f"{request.args['id']}"
+    print("./user/" + index + ".txt")
+    if os.path.exists("./user/" + index + ".txt") == True:
+        file = open("./user/" + index + ".txt", 'x')
+        file.write(name['nom'] + "\n" + name['prenom'])
+        file.close()
+    else:
+        name ="ton code fonctionne pas"
+    return make_response(name, 200)
+
 
 
 """
@@ -72,20 +90,4 @@ if (__name__) == '__main__':
         debug=True,
     )
 
-    """
-    on cherche a modifier un utilisateur
-    params:
-    """
 
-@app.route("/modifyuser", methods=["PATCH"])
-def patch_user():
-
-
-    return
-
-if (__name__) == '__main__':
-    app.run(
-        host="0.0.0.0",
-        port=8081,
-        debug=True,
-    )
