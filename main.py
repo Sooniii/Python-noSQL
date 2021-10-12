@@ -55,10 +55,13 @@ params: newUser(un json avec le nom et le prenom d'un nouvel utilisateur)
 def add_user():
     name = request.get_json()
     index = f"{request.args['id']}"
-    
-    file = open(index+".txt",'x')
-    file.write(name['nom']+"\n"+name['prenom'])
-    file.close()
+    print("./user/"+index+".txt")
+    if os.path.exists("./user/"+index+".txt") == False:
+        file = open("./user/"+index+".txt",'x')
+        file.write(name['nom']+"\n"+name['prenom'])
+        file.close()
+    else:
+        name = "l'utilisateur existe deja"
     return make_response(name, 200)
 
 
