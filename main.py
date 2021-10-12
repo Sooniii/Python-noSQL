@@ -46,6 +46,25 @@ def show_users():
     return make_response(reponse, 200)
 
 
+@app.route("/del_user", methods=["DELETE"])
+def del_user():
+    """ supprimer un user """
+
+    id = f"{request.args['id']}"
+    print("./user/"+id+".txt")
+
+    if os.path.exists("./user/"+id+".txt") == True:
+        os.remove("./user/" +id + ".txt")
+        delete = "Le user " + id + " à été supprimer"
+        print("test 1")
+    else:
+        delete = "le user n'existait pas"
+        print("test 2")
+
+    return make_response(delete,200)
+
+
+
 """
 crée un fichier .txt avec un nouvelle utilisateur
 params: newUser(un json avec le nom et le prenom d'un nouvel utilisateur)
