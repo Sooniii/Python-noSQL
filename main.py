@@ -54,7 +54,11 @@ params: newUser(un json avec le nom et le prenom d'un nouvel utilisateur)
 @app.route("/adduser", methods=["POST"])
 def add_user():
     name = request.get_json()
-    print(name)
+    index = f"{request.args['id']}"
+    
+    file = open(index+".txt",'x')
+    file.write(name['nom']+"\n"+name['prenom'])
+    file.close()
     return make_response(name, 200)
 
 
