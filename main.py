@@ -67,7 +67,13 @@ def patch_user():
 
 @app.route("/del_user", methods=["DELETE"])
 def del_user():
-    """ supprimer un user """
+    """
+    supprimer un user
+    params:none
+    return: une reponse pisitive/négatif si le user est supprimer
+
+
+    """
 
     id = f"{request.args['id']}"
     print("./user/"+id+".txt")
@@ -75,10 +81,8 @@ def del_user():
     if os.path.exists("./user/"+id+".txt") == True:
         os.remove("./user/" +id + ".txt")
         delete = "Le user " + id + " à été supprimer"
-        print("test 1")
     else:
         delete = "le user n'existait pas"
-        print("test 2")
 
     return make_response(delete,200)
 
