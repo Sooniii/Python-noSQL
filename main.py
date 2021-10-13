@@ -7,7 +7,7 @@ from flask import make_response
 app = Flask(__name__)
 
 
-# @app.route("/", methods=["GET","POST"])
+@app.route("/", methods=["GET","POST"])
 def acceuil():
     if request.method == "GET":
         pass
@@ -115,3 +115,5 @@ if __name__ == '__main__':
     )
 
 
+
+h
