@@ -40,7 +40,11 @@ def display():
 
 
     return make_response(all_champ)
-
+"""
+fonction cherchant  adelete les champion 
+param : nom des champions 
+return un message nous disant que la suppression a eu lieu 
+"""
 
 
 @app.route("/delete", methods=["DELETE"])
