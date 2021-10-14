@@ -46,12 +46,23 @@ def display():
     return make_response(all_champ)
 
 
-if __name__ == '__main__':
-    app.run(
-        host="0.0.0.0",
-        port=8081,
-        debug=True,
-    )
+@app.route("/delete", methods=["DELETE"])
+def delete():
+    result= ""
+    index = f"{request.args['name']}"
+    champion = collection.find()
+    for item in champion:
+        if index == item['name'] :
+            result = collection.delete_one({"name": index})
+            response = "Le champion à bien été supprimer.\n"
+
+
+
+
+
+    return make_response(response, 200)
+
+
 
 
 
@@ -94,4 +105,11 @@ def patch_user():
     else:
         response = "Le champion n'existe pas. Création du champion.\n" + json
     return make_response(name, 200)
+
+if __name__ == '__main__':
+    app.run(
+        host="0.0.0.0",
+        port=8081,
+        debug=True,
+    )
 
