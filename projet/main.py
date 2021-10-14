@@ -156,21 +156,6 @@ def patch_user():
 
 
 
-
-
-
-    """
-        ajouter un Champion
-        params: Champion (un json avec les information du champion)
-        return : le json ajouté
-    """
-
-
-
-
-
-
-
 if __name__ == '__main__':
     app.run(
         host="0.0.0.0",
