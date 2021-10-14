@@ -45,12 +45,15 @@ def show_users():
 
     return make_response(reponse, 200)
 
+
+
+
+
     """
     modifer un utilisateur
     params: User (un json avec le nom et le prenom d'un utilisateur)
     return : le json modifer
     """
-
 
 @app.route("/modifyUser", methods=["PATCH"])
 def patch_user():

@@ -1,0 +1,936 @@
+{
+  "name" : "Aatrox",
+	"title" : "Épée des Darkin",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Mid"]
+},
+{
+  "name" : "Ahri",
+	"title" : "Renard à neuf queues",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+},
+{
+  "name" : "Akali",
+	"title" : "Poing des ombres",
+	"class" : ["Assassin"],
+	"role" : ["Top", "Mid"]
+}
+{
+  "name" : "Akshan",
+	"title" : "Sentinelle Rebelle",
+	"class" : ["Tireur"],
+	"role" : ["Mid", "Bot"]
+}
+{
+  "name" : "Alistar",
+	"title" : "Minotaure",
+	"class" : ["Tank"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Amumu",
+	"title" : "Momie mélancolique",
+	"class" : ["Tank"],
+	"role" : ["Jungle", "Support"]
+}
+{
+  "name" : "Anivia",
+	"title" : "Cryophénix",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Annie",
+	"title" : "Enfant des ténèbres",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Support"]
+}
+{
+  "name" : "Aphelios",
+	"title" : "Arme des Lunaris",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Ashe",
+	"title" : "Archère de givre",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Aurelion Sol",
+	"title" : "Forgeur d'étoiles",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Azir",
+	"title" : "Empereur des sables",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Bard",
+	"title" : "Gardien errant",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Blitzcrank",
+	"title" : "Golem de vapeur",
+	"class" : ["Tank"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Brand",
+	"title" : "Vengeur Flamboyant",
+	"class" : ["Mage"],
+	"role" : ["Support", "Mid"]
+}
+{
+  "name" : "Braum",
+	"title" : "Cœur de Frejlord",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Caitlyn",
+	"title" : "Shérif de Piltover",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Camille",
+	"title" : "Ombre d'acier",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Mid"]
+}
+{
+  "name" : "Cassiopeia",
+	"title" : "Étreinte du serpent",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Top"]
+}
+{
+  "name" : "Cho'Gath",
+	"title" : "Terreur Noire",
+	"class" : ["Tank"],
+	"role" : ["Top", "Mid"]
+}
+{
+  "name" : "Corki",
+	"title" : "Artilleur téméraire",
+	"class" : ["Tireur"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Darius",
+	"title" : "Main de Noxus",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Diana",
+	"title" : "Mépris de la lune",
+	"class" : ["Combattant"],
+	"role" : ["Jungle", "Mid", "Top"]
+}
+{
+  "name" : "Dr. Mundo",
+	"title" : "Dément de Zaun",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Draven",
+	"title" : "Glorieux exécuteur",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Ekko",
+	"title" : "Fractureur du Temps",
+	"class" : ["Assassin"],
+	"role" : ["Mid", "Jungle", "Top"]
+}
+{
+  "name" : "Elise",
+	"title" : "Reine Araignée",
+	"class" : ["Mage"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Evelynn",
+	"title" : "Démon Sadique",
+	"class" : ["Assassin"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Ezreal",
+	"title" : "Explorateur Prodigue",
+	"class" : ["Tireur"],
+	"role" : ["Bot", "Mid"]
+}
+{
+  "name" : "Fiddlesticks",
+	"title" : "Effroi nocturne",
+	"class" : ["Mage"],
+	"role" : ["Jungle", "Mid"]
+}
+{
+  "name" : "Fiora",
+	"title" : "Sublime bretteuse",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Fizz",
+	"title" : "Filou des mers",
+	"class" : ["Assassin"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Galio",
+	"title" : "Colosse",
+	"class" : ["Tank"],
+	"role" : ["Mid", "Support"]
+}
+{
+  "name" : "Gangplank",
+	"title" : "Fléau des mers",
+	"class" : ["Combattant"],
+	"role" : ["Top","Mid"]
+}
+{
+  "name" : "Garen",
+	"title" : "Force de Démacia",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Gnar",
+	"title" : "Chaînon manquant",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Gragas",
+	"title" : "Agitateur",
+	"class" : ["Combattant"],
+	"role" : ["Jungle", "Top", "Mid", "Support"]
+}
+{
+  "name" : "Graves",
+	"title" : "Hors-la-Loi",
+	"class" : ["Tireur"],
+	"role" : ["Jungle", "Top", "Mid"]
+}
+{
+  "name" : "Gwen",
+	"title" : "Couturière Sacrée",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Jungle"]
+}
+{
+  "name" : "Hecarim",
+	"title" : "Ombre de la Guerre",
+	"class" : ["Combattant"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Heimerdinger",
+	"title" : "Inventeur Réputé",
+	"class" : ["Mage"],
+	"role" : ["Top", "Mid", "Bot"]
+}
+{
+  "name" : "Illaoi",
+	"title" : "Prêtresse du Kraken",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Irelia",
+	"title" : "Danseuse des lames",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Mid"]
+}
+{
+  "name" : "Ivern",
+	"title" : "Aîné de la forêt",
+	"class" : ["Support"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Janna",
+	"title" : "Avatar de l'air",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Jarvan IV",
+	"title" : "Exemple Démacien",
+	"class" : ["Tank"],
+	"role" : ["Jungle", "Top"]
+}
+{
+  "name" : "Jax",
+	"title" : "Maître d'Armes",
+	"class" : ["Tank"],
+	"role" : ["Top", "Jungle"]
+}
+{
+  "name" : "Jayce",
+	"title" : "Protecteur du Futur",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Mid"]
+}
+{
+  "name" : "Jhin",
+	"title" : "Virtuose",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Jinx",
+	"title" : "Gâchette folle",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Kai'Sa",
+	"title" : "Fille du néant",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Kalista",
+	"title" : "Lance de la Vengeance",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Karma",
+	"title" : "Sagesse incarnée",
+	"class" : ["Mage"],
+	"role" : ["Support", "Top", "Mid"]
+}
+{
+  "name" : "Karthus",
+	"title" : "Liche",
+	"class" : ["Mage"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Kassadin",
+	"title" : "Chasseur du Néant",
+	"class" : ["Assassin"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Katarina",
+	"title" : "Lame sinistre",
+	"class" : ["Assassin"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Kayle",
+	"title" : "Justicière",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Mid"]
+}
+{
+  "name" : "Kennen",
+	"title" : "Cœur de la tempête",
+	"class" : ["Mage"],
+	"role" : ["Top", "Mid"]
+}
+{
+  "name" : "Kha'Zix",
+	"title" : "Faucheur du Néant",
+	"class" : ["Assassin"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Kindred",
+	"title" : "Chasseurs éternels",
+	"class" : ["Tireur"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Kled",
+	"title" : "Cavalier Colérique",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Kog'Maw",
+	"title" : "Gueule des abysses",
+	"class" : ["Tireur"],
+	"role" : ["Bot", "Mid"]
+}
+{
+  "name" : "LeBlanc",
+	"title" : "Manipulatrice",
+	"class" : ["Assassin"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Lee Sin",
+	"title" : "Moine aveugle",
+	"class" : ["Combattant"],
+	"role" : ["Jungle", "Top", "Mid"]
+}
+{
+  "name" : "Leona",
+	"title" : "Aube radieuse",
+	"class" : ["Tank"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Lillia",
+	"title" : "Fleur timide",
+	"class" : ["Combattant"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Lissandra",
+	"title" : "Sorcière de glace",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Lucian",
+	"title" : "Purificateur",
+	"class" : ["Tireur"],
+	"role" : ["Bot", "Mid"]
+}
+{
+  "name" : "Lulu",
+	"title" : "Sorcière féérique",
+	"class" : ["Support"],
+	"role" : ["Support", "Mid", "Top"]
+}
+{
+  "name" : "Lux",
+	"title" : "Dame de lumière",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Support"]
+}
+{
+  "name" : "Maître Yi",
+	"title" : "Fine Lame Wuju",
+	"class" : ["Assassin"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Malphite",
+	"title" : "Éclat du monolithe",
+	"class" : ["Tank"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Malzahar",
+	"title" : "Prophète du Néant",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Maokai",
+	"title" : "Tréant torturé",
+	"class" : ["Tank"],
+	"role" : ["Top", "Support"]
+}
+{
+  "name" : "Miss Fortune",
+	"title" : "Chasseur de primes",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Mordekaiser",
+	"title" : "Revenant de Fer",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Morgana",
+	"title" : "Ange Déchu",
+	"class" : ["Mage"],
+	"role" : ["Support", "Mid", "Jungle"]
+}
+{
+  "name" : "Nami",
+	"title" : "Aquamancienne",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Nasus",
+	"title" : "Gardien des sables",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Nautilus",
+	"title" : "Titan des profondeurs",
+	"class" : ["Tank"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Neeko",
+	"title" : "Caméléon curieux",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Support"]
+}
+{
+  "name" : "Nidalee",
+	"title" : "Chasseresse bestiale",
+	"class" : ["Assassin"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Nocturne",
+	"title" : "Éternel Cauchemar",
+	"class" : ["Assassin"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Nunu et Willump",
+	"title" : "Le Garçon et son Yéti",
+	"class" : ["Tank"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Olaf",
+	"title" : "Berserker",
+	"class" : ["Combattant"],
+	"role" : ["Jungle", "Top"]
+}
+{
+  "name" : "Orianna",
+	"title" : "Demoiselle mécanique",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Ornn",
+	"title" : "Dieu de la Forge Volcanique",
+	"class" : ["Tank"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Pantheon",
+	"title" : "Artisan de la guerre",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Jungle", "Mid", "Support"]
+}
+{
+  "name" : "Poppy",
+	"title" : "Gardienne du marteau",
+	"class" : ["Tank"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Pyke",
+	"title" : "L'éventreur des abysses",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Qiyana",
+	"title" : "Impératrice des Eléments",
+	"class" : ["Assassin"],
+	"role" : ["Jungle", "Mid"]
+}
+{
+  "name" : "Quinn",
+	"title" : "Ailes de Demacia",
+	"class" : ["Tireur"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Rakan",
+	"title" : "Charmeur",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Rammus",
+	"title" : "Tatou Blindé",
+	"class" : ["Tank"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Rek'Sai",
+	"title" : "Traqueuse du Néant",
+	"class" : ["Combattant"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Rell",
+	"title" : "Vierge de Fer",
+	"class" : ["Tank"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Renekton",
+	"title" : "Dévoreur des sables",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Rengar",
+	"title" : "Fier traqueur",
+	"class" : ["Assassin"],
+	"role" : ["Jungle", "Top"]
+}
+{
+  "name" : "Riven",
+	"title" : "Exilée brisée",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Rumble",
+	"title" : "Menace mécanisée",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Jungle", "Mid"]
+}
+{
+  "name" : "Ryze",
+	"title" : "Mage runique",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Top"]
+}
+{
+  "name" : "Samira",
+	"title" : "Rose du désert",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Sejuani",
+	"title" : "Colère de l'hiver",
+	"class" : ["Tank"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Senna",
+	"title" : "Rédemptrice",
+	"class" : ["Tireur"],
+	"role" : ["Bot", "Support"]
+}
+{
+  "name" : "Séraphine",
+	"title" : "Chanteuse rêveuse",
+	"class" : ["Mage"],
+	"role" : ["Support", "Mid"]
+}
+{
+  "name" : "Sett",
+	"title" : "Patron",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Mid", "Support"]
+}
+{
+  "name" : "Shaco",
+	"title" : "Bouffon des ténèbres",
+	"class" : ["Assassin"],
+	"role" : ["Jungle", "Support"]
+}
+{
+  "name" : "Shen",
+	"title" : "Œil du crépuscule",
+	"class" : ["Tank"],
+	"role" : ["Top", "Support"]
+}
+{
+  "name" : "Shyvana",
+	"title" : "Demi-Dragon",
+	"class" : ["Combattant"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Singed",
+	"title" : "Chimiste fou",
+	"class" : ["Tank"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Sion",
+	"title" : "Colosse Mort-Vivant",
+	"class" : ["Tank"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Sivir",
+	"title" : "Vierge martiale",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Skarner",
+	"title" : "Gardien de Cristal",
+	"class" : ["Combattant"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Sona",
+	"title" : "Virtuose de la harpe",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Soraka",
+	"title" : "Enfant des étoiles",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Swain",
+	"title" : "Maître tacticien",
+	"class" : ["Mage"],
+	"role" : ["Bot", "Support"]
+}
+{
+  "name" : "Sylas",
+	"title" : "Révolutionnaire Déchaîné",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Syndra",
+	"title" : "Souveraine Obscure",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Tahm Kench",
+	"title" : "Roi des rivières",
+	"class" : ["Support"],
+	"role" : ["Support", "Top"]
+}
+{
+  "name" : "Taliyah",
+	"title" : "Tisseuse de pierres",
+	"class" : ["Mage"],
+	"role" : ["Jungle", "Mid"]
+}
+{
+  "name" : "Talon",
+	"title" : "Lame des ténèbres",
+	"class" : ["Assassin"],
+	"role" : ["Jungle", "Mid"]
+}
+{
+  "name" : "Taric",
+	"title" : "Bouclier de Valoran",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Teemo",
+	"title" : "Scout de Bantam",
+	"class" : ["Tireur"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Thresh",
+	"title" : "Garde aux chaînes",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Tristana",
+	"title" : "Canonnière Yordle",
+	"class" : ["Tireur"],
+	"role" : ["Bot", "Mid"]
+}
+{
+  "name" : "Trundle",
+	"title" : "Roi des trolls",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Jungle", "Support"]
+}
+{
+  "name" : "Tryndamere",
+	"title" : "Roi barbare",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Mid"]
+}
+{
+  "name" : "Twisted Fate",
+	"title" : "Maître des cartes",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Twitch",
+	"title" : "Semeur de peste",
+	"class" : ["Tireur"],
+	"role" : ["Bot", "Jungle"]
+}
+{
+  "name" : "Udyr",
+	"title" : "Gardien des esprits",
+	"class" : ["Combattant"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Urgot",
+	"title" : "Broyeur",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Varus",
+	"title" : "Flèche de la Vengeance",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Vayne",
+	"title" : "Chasseur nocturne",
+	"class" : ["Tireur"],
+	"role" : ["Bot", "Top"]
+}
+{
+  "name" : "Veigar",
+	"title" : "Seigneur des maléfices",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Support"]
+}
+{
+  "name" : "Vel'Koz",
+	"title" : "Œil du Néant",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Support"]
+}
+{
+  "name" : "Vex",
+	"title" : "Ombre du Désespoir",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Vi",
+	"title" : "Cogne de Piltover",
+	"class" : ["Combattant"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Viego",
+	"title" : "Roi déchu",
+	"class" : ["Assassin"],
+	"role" : ["Jungle", "Top"]
+}
+{
+  "name" : "Viktor",
+	"title" : "Héraut des machines",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Vladimir",
+	"title" : "Saigneur pourpre",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Top"]
+}
+{
+  "name" : "Volibear",
+	"title" : "Grondement de tonnerre",
+	"class" : ["Combattant"],
+	"role" : ["Jungle", "Top"]
+}
+{
+  "name" : "Warwick",
+	"title" : "Fureur Dechaînée de Zaun",
+	"class" : ["Combattant"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Wukong",
+	"title" : "Roi des singes",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Jungle"]
+}
+{
+  "name" : "Xayah",
+	"title" : "La Rebelle",
+	"class" : ["Tireur"],
+	"role" : ["Bot"]
+}
+{
+  "name" : "Xerath",
+	"title" : "Mage suprême",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Support"]
+}
+{
+  "name" : "Xin Zhao",
+	"title" : "Sénéchal de Demacia",
+	"class" : ["Combattant"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Yasuo",
+	"title" : "Disgracié",
+	"class" : ["Combattant"],
+	"role" : ["Top", "Mid", "Bot"]
+}
+{
+  "name" : "Yone",
+	"title" : "Inoublié",
+	"class" : ["Assassin"],
+	"role" : ["Top", "Mid"]
+}
+{
+  "name" : "Yorick",
+	"title" : "Fossoyeur",
+	"class" : ["Combattant"],
+	"role" : ["Top"]
+}
+{
+  "name" : "Yuumi",
+	"title" : "Gardienne du Grimoire",
+	"class" : ["Support"],
+	"role" : ["Support"]
+}
+{
+  "name" : "Zac",
+	"title" : "Arme Secrète",
+	"class" : ["Tank"],
+	"role" : ["Jungle"]
+}
+{
+  "name" : "Zed",
+	"title" : "Maître des Ombres",
+	"class" : ["Assassin"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Ziggs",
+	"title" : "Expert des Hexplosifs",
+	"class" : ["Mage"],
+	"role" : ["Mid", "Bot"]
+}
+{
+  "name" : "Zilean",
+	"title" : "Gardien du Temps",
+	"class" : ["Support"],
+	"role" : ["Support", "Mid"]
+}
+{
+  "name" : "Zoé",
+	"title" : "Manifestation du Crépuscule",
+	"class" : ["Mage"],
+	"role" : ["Mid"]
+}
+{
+  "name" : "Zyra",
+	"title" : "Dame aux Ronces",
+	"class" : ["Mage"],
+	"role" : ["Support", "Mid", "Jungle"]
+}
