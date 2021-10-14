@@ -83,18 +83,15 @@ def add():
     json = request.get_json()
     name = json["name"]
     champion = collection.find()
+    exist = False
     for item in champion:
-        item['name']
-        print(name)
-        print(item['name'])
         if name == item['name']:
-
-            collection.insert(json)
-
-            response = "Le champion est bien enregistré.\n" + json["name"]
-        else:
-            response = "Ce champion existe déjà : " + json["name"]
-
+            exist = True
+    if exist == False:
+        collection.insert(json)
+        response = "Le champion est bien enregistré : " + json["name"]
+    else:
+        response = "Ce champion existe déjà : " + json["name"]
     return make_response(response, 200)
 
 
