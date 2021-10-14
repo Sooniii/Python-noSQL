@@ -74,11 +74,7 @@ def display():
     else:
         for item in all_champ:
             reponse = reponse + "<p>" + item['name'] +" | "+item['title'] +" | "+str(item['class']) +" | "+ str(item['role']) + "</p>"
-
-        all_champ =  all_champ + "<p>" + item['name'] + "</p>"
-
-
-    return make_response(all_champ)
+    return make_response(reponse,200)
 """
 fonction cherchant  adelete les champion 
 param : nom des champions 
