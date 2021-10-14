@@ -19,6 +19,8 @@ return: la liste des champions (String)
 @app.route("/", methods=["GET"])
 def display():
 
+
+
     if "name" in request.args:
         index = f"{request.args['name']}"
         champion = collection.find({"name": str(index)})
@@ -50,3 +52,46 @@ if __name__ == '__main__':
         port=8081,
         debug=True,
     )
+
+
+
+"""
+    modifer un Champion
+    params: Champion (un json avec les information du champion)
+    return : le json ajouté
+"""
+@app.route("/addChampion", methods=["POST"])
+def add():
+    json = request.get_json()
+    index = f"{request.args['id']}"
+    if collection.find({"_id" : index}) == False:
+
+        collection.insert(json)
+
+        response = "Le champion est bien enregistrer.\n" + json
+    else:
+        response = "Un champion existe déjà.\n" + collection.find({"_id" : index})
+
+    return make_response(response, 200)
+
+
+
+
+"""
+    modifer un Champion
+    params: Champion (un json avec les information du champion)
+    return : le json modifer
+"""
+@app.route("/modifyChampion", methods=["PATCH"])
+def patch_user():
+    name = request.get_json()
+    index = f"{request.args['id']}"
+    if collection.find({"_id" : index}) == True:
+
+        collection.updateMany({"_id" : index}, { json })
+
+        response = "Le champion à bien été mise à jour.\n" + json
+    else:
+        response = "Le champion n'existe pas. Création du champion.\n" + json
+    return make_response(name, 200)
+
