@@ -63,27 +63,41 @@ def delete():
     return make_response(response, 200)
 
 
-
-
-
 """
-    modifer un Champion
+    ajouter un Champion
     params: Champion (un json avec les information du champion)
     return : le json ajouté
 """
 @app.route("/addChampion", methods=["POST"])
 def add():
     json = request.get_json()
-    index = f"{request.args['id']}"
-    if collection.find({"_id" : index}) == False:
+    name = json["name"]
+    champion = collection.find()
+    for item in champion:
+        item['name']
+        print(name)
+        print(item['name'])
+        if name == item['name']:
 
-        collection.insert(json)
+            collection.insert(json)
 
-        response = "Le champion est bien enregistrer.\n" + json
-    else:
-        response = "Un champion existe déjà.\n" + collection.find({"_id" : index})
+            response = "Le champion est bien enregistré.\n" + json["name"]
+        else:
+            response = "Ce champion existe déjà : " + json["name"]
 
     return make_response(response, 200)
+
+
+if __name__ == '__main__':
+    app.run(
+        host="0.0.0.0",
+        port=8081,
+        debug=True,
+    )
+
+
+
+
 
 
 
@@ -105,11 +119,4 @@ def patch_user():
     else:
         response = "Le champion n'existe pas. Création du champion.\n" + json
     return make_response(name, 200)
-
-if __name__ == '__main__':
-    app.run(
-        host="0.0.0.0",
-        port=8081,
-        debug=True,
-    )
 
