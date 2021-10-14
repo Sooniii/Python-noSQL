@@ -45,6 +45,30 @@ def display():
 
     return make_response(all_champ)
 
+"""
+    ajouter un Champion
+    params: Champion (un json avec les information du champion)
+    return : le json ajouté
+"""
+@app.route("/addChampion", methods=["POST"])
+def add():
+    json = request.get_json()
+    name = json["name"]
+    champion = collection.find()
+    for item in champion:
+        item['name']
+        print(name)
+        print(item['name'])
+        if name == item['name']:
+
+            collection.insert(json)
+
+            response = "Le champion est bien enregistré.\n" + json["name"]
+        else:
+            response = "Ce champion existe déjà : " + json["name"]
+
+    return make_response(response, 200)
+
 
 if __name__ == '__main__':
     app.run(
@@ -55,24 +79,7 @@ if __name__ == '__main__':
 
 
 
-"""
-    modifer un Champion
-    params: Champion (un json avec les information du champion)
-    return : le json ajouté
-"""
-@app.route("/addChampion", methods=["POST"])
-def add():
-    json = request.get_json()
-    index = f"{request.args['id']}"
-    if collection.find({"_id" : index}) == False:
 
-        collection.insert(json)
-
-        response = "Le champion est bien enregistrer.\n" + json
-    else:
-        response = "Un champion existe déjà.\n" + collection.find({"_id" : index})
-
-    return make_response(response, 200)
 
 
 
