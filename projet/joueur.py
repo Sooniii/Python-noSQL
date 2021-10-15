@@ -16,7 +16,7 @@ return: la liste des joueur (String)
 """
 
 
-@app.route("/joueur", methods=["GET"])
+
 def displayPlayer():
 
 
@@ -78,7 +78,7 @@ def displayPlayer():
     params: Joueur (un json avec les information du joueur)
     return : le json modifer
 """
-@app.route("/modifyJoueur", methods=["PATCH"])
+
 def patch_player():
     json = request.get_json()
     index = f"{request.args['name']}"

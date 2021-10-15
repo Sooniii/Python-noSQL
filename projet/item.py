@@ -20,7 +20,7 @@ return: la liste des objet (String)
 
 """
 
-@app.route("/item", methods=["GET"])
+
 def displayItem():
 
 
@@ -80,7 +80,7 @@ def displayItem():
     params: Objet (un json avec les information du objet)
     return : le json modifer
 """
-@app.route("/modifyItem", methods=["PATCH"])
+
 def patch_item():
     json = request.get_json()
     index = f"{request.args['name']}"
@@ -106,7 +106,7 @@ param : nom des objets
 return un message nous disant que la suppression a eu lieu 
 """
 
-@app.route("/deleteItem", methods=["DELETE"])
+
 def delete_Item():
     result= ""
     index = f"{request.args['name']}"

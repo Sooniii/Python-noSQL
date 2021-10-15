@@ -5,6 +5,7 @@ from flask import make_response
 import pymongo
 import champion
 import joueur
+import item
 app = Flask(__name__)
 
 client = pymongo.MongoClient(
@@ -28,6 +29,31 @@ def add_champion():
 def modify_champion():
     return champion.patch_champion()
 
+
+@app.route("/joueur", methods=["GET"])
+def get_joueur():
+    return joueur.displayPlayer()
+
+@app.route("/modifyJoueur", methods=["PATCH"])
+def modify_joueur():
+    return joueur.patch_player()
+
+@app.route("/deleteJoueur", methods=["DELETE"])
+def delete_joueur():
+    return joueur.delete_joueur()
+
+
+@app.route("/item", methods=["GET"])
+def get_item():
+    return item.displayItem()
+
+@app.route("/modifyItem", methods=["PATCH"])
+def modify_item():
+    return item.patch_item()
+
+@app.route("/deleteItem", methods=["DELETE"])
+def delete_item():
+    return item.delete_Item()
 
 
 
