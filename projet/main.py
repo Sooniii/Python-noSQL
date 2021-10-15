@@ -100,54 +100,26 @@ def delete():
 
     return make_response(response, 200)
 
-
-
-
 """
     ajouter un Champion
     params: Champion (un json avec les information du champion)
     return : le json ajouté
 """
-
-
 @app.route("/addChampion", methods=["POST"])
 def add():
     json = request.get_json()
-
-    index = f"{request.args['id']}"
-    if collection.find({"_id": index}) == False:
-
-        collection.insert(json)
-
-        response = "Le champion est bien enregistrer.\n"
-    else:
-        test = collection.find({"_id": index})
-        print(test['name'])
-        response = "Un champion existe déjà.\n"  # + collection.find({"_id" : index})
-
     name = json["name"]
-    #collection.insert(json)
-
-    name = f"arguments : {request.args['name']}"
-
-    jsso_name = {"name": name}
-    #make_response(jsso_name, 200)
-    champion = collection.find({"name" : name})
-    all_champ = []
+    champion = collection.find()
+    exist = False
     for item in champion:
-        all_champ.append(item)
-
-    if len(all_champ) == 0:
-
+        if name == item['name']:
+            exist = True
+    if exist == False:
         collection.insert(json)
-
-        response = "Le champion est bien enregistré.\n" + name
+        response = "Le champion est bien enregistré : " + json["name"]
     else:
-        response = "Ce champion existe déjà : " + name
-
+        response = "Ce champion existe déjà : " + json["name"]
     return make_response(response, 200)
-
-
 
 
 """
@@ -155,22 +127,12 @@ def add():
     params: Champion (un json avec les information du champion)
     return : le json modifer
 """
-
-
 @app.route("/modifyChampion", methods=["PATCH"])
 def patch_user():
-
-    name = request.get_json()
-    index = f"{request.args['id']}"
-    if collection.find({"_id": index}) == True:
-
-        collection.updateMany({"_id": index}, {json})
-
     json = request.get_json()
     index = f"{request.args['name']}"
 
     champion = collection.find({"name":index})
-
 
     all_champ = []
     for item in champion:
@@ -182,12 +144,10 @@ def patch_user():
 
         response = "Le champion à bien été mise à jour."
     else:
-
-
-
-
         response = "Le champion n'existe pas. Création du champion?"
     return make_response(response, 200)
+
+
 
 
 
@@ -197,3 +157,4 @@ if __name__ == '__main__':
         port=8081,
         debug=True,
     )
+
