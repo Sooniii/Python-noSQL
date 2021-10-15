@@ -121,3 +121,19 @@ def delete_joueur():
         response = "le joueur choisi a déjà été supprimer ou n'exise pas"
 
     return make_response(response, 200)
+
+
+def add_player():
+    json = request.get_json()
+    name = json["name"]
+    player = collection_player.find({"name":name})
+    all_player = []
+
+    for item in player:
+        all_player.append(item)
+    if not all_player:
+        collection_player.insert(json)
+        response = "Le joueur est bien enregistré : " + json["name"]
+    else:
+        response = "Ce joueur existe déjà : " + json["name"]
+    return make_response(response, 200)
