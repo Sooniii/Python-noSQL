@@ -123,3 +123,24 @@ def delete_Item():
         response = "l'objet choisi a déjà été supprimer ou n'exise pas"
 
     return make_response(response, 200)
+
+"""
+    ajouter un objet
+    params: objet (un json avec les information du champion)
+    return : le json ajouté
+"""
+
+def add_item():
+    json = request.get_json()
+    name = json["name"]
+    objet = collection_item.find({"name":name})
+    all_item = []
+
+    for item in objet:
+        all_item.append(item)
+    if not all_item:
+        collection_champion.insert(json)
+        response = "L'objet est bien enregistré : " + json["name"]
+    else:
+        response = "Cet objet existe déjà : " + json["name"]
+    return make_response(response, 200)
