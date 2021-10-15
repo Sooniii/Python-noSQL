@@ -109,18 +109,17 @@ def delete():
 def add():
     json = request.get_json()
     name = json["name"]
-    champion = collection.find()
-    exist = False
+    champion = collection.find({"name":name})
+    all_champ = []
+
     for item in champion:
-        if name == item['name']:
-            exist = True
-    if exist == False:
+        all_champ.append(item)
+    if not all_champ:
         collection.insert(json)
         response = "Le champion est bien enregistré : " + json["name"]
     else:
         response = "Ce champion existe déjà : " + json["name"]
     return make_response(response, 200)
-
 
 """
     modifer un Champion
@@ -156,7 +155,7 @@ return: la liste des joueur (String)
 """
 
 @app.route("/joueur", methods=["GET"])
-def display():
+def displayPlayer():
 
 
     if "name" in request.args:
@@ -216,7 +215,7 @@ def display():
     return : le json modifer
 """
 @app.route("/modifyJoueur", methods=["PATCH"])
-def patch_user():
+def patch_player():
     json = request.get_json()
     index = f"{request.args['name']}"
 
@@ -241,8 +240,8 @@ param : nom des joueur
 return un message nous disant que la suppression a eu lieu 
 """
 
-@app.route("/delete", methods=["DELETE"])
-def delete():
+@app.route("/deleteJoueur", methods=["DELETE"])
+def delete_joueur():
     result= ""
     index = f"{request.args['name']}"
     joueur = collection.find()
