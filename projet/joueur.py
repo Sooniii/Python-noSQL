@@ -60,6 +60,8 @@ def displayPlayer():
             reponse = reponse + "<p>" + item['name'] +" | "+item['equipe'] +" | "+str(item['role']) + "</p>"
     return make_response(reponse,200)
 
+
+
 """
     modifer un Joueur
     params: Joueur (un json avec les information du joueur)
