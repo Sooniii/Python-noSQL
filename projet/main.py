@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 from flask import make_response
+import joueur
 import pymongo
 
 app = Flask(__name__)
@@ -8,7 +9,8 @@ app = Flask(__name__)
 client = pymongo.MongoClient(
     "mongodb+srv://m001-student:root@cluster0.oia9n.mongodb.net/Lol?retryWrites=true&w=majority")
 db = client.Lol
-collection = db.Champion
+collection_champion = db.Champion
+collection_player = db.Player
 
 """
 Affiche la liste des champions en fonction de criteres de recherches
@@ -18,24 +20,24 @@ return: la liste des champions (String)
 """
 
 
-@app.route("/", methods=["GET"])
-def display():
+@app.route("/champion", methods=["GET"])
+def display_champion():
 
 
     if "name" in request.args:
         index = f"{request.args['name']}"
-        champion = collection.find({"name": str(index)})
+        champion = collection_champion.find({"name": str(index)})
     elif "title" in request.args:
         index = f"{request.args['title']}"
-        champion = collection.find({"title": str(index)})
+        champion = collection_champion.find({"title": str(index)})
     elif "class" in request.args:
         index = f"{request.args['class']}"
-        champion = collection.find({"class": str(index)})
+        champion = collection_champion.find({"class": str(index)})
     elif "role" in request.args:
         index = f"{request.args['role']}"
-        champion = collection.find({"role": str(index)})
+        champion = collection_champion.find({"role": str(index)})
     else:
-        champion = collection.find()
+        champion = collection_champion.find()
     reponse = ""
     all_champ = []
 
@@ -82,18 +84,18 @@ return un message nous disant que la suppression a eu lieu
 """
 
 
-@app.route("/delete", methods=["DELETE"])
-def delete():
+@app.route("/deleteChampion", methods=["DELETE"])
+def delete_champion():
     result= ""
     index = f"{request.args['name']}"
-    champion = collection.find()
+    champion = collection_champion.find()
     validation = False
     for item in champion:
         if index == item['name'] :
             validation = True
 
     if validation == True:
-        result = collection.delete_one({"name": index})
+        result = collection_champion.delete_one({"name": index})
         response = "Le champion à bien été supprimer.\n"
     else:
         response = "le champion choisi a déjà été supprimer ou n'exise pas"
@@ -106,16 +108,16 @@ def delete():
     return : le json ajouté
 """
 @app.route("/addChampion", methods=["POST"])
-def add():
+def add_champion():
     json = request.get_json()
     name = json["name"]
-    champion = collection.find({"name":name})
+    champion = collection_champion.find({"name":name})
     all_champ = []
 
     for item in champion:
         all_champ.append(item)
     if not all_champ:
-        collection.insert(json)
+        collection_champion.insert(json)
         response = "Le champion est bien enregistré : " + json["name"]
     else:
         response = "Ce champion existe déjà : " + json["name"]
@@ -127,11 +129,11 @@ def add():
     return : le json modifer
 """
 @app.route("/modifyChampion", methods=["PATCH"])
-def patch_user():
+def patch_champion():
     json = request.get_json()
     index = f"{request.args['name']}"
 
-    champion = collection.find({"name":index})
+    champion = collection_champion.find({"name":index})
 
     all_champ = []
     for item in champion:
@@ -139,7 +141,7 @@ def patch_user():
         print(len(all_champ))
     if len(all_champ) > 0:
 
-        collection.find_one_and_replace({"name" : index}, json)
+        collection_champion.find_one_and_replace({"name" : index}, json)
 
         response = "Le champion à bien été mise à jour."
     else:
@@ -147,116 +149,7 @@ def patch_user():
     return make_response(response, 200)
 
 
-"""
-Affiche la liste des joueur en fonction de criteres de recherches
-params: none
-return: la liste des joueur (String)
 
-"""
-
-@app.route("/joueur", methods=["GET"])
-def displayPlayer():
-
-
-    if "name" in request.args:
-        index = f"{request.args['name']}"
-        joueur = collection.find({"name": str(index)})
-    elif "title" in request.args:
-        index = f"{request.args['equipe']}"
-        joueur = collection.find({"equipe": str(index)})
-    elif "role" in request.args:
-        index = f"{request.args['role']}"
-        joueur = collection.find({"role": str(index)})
-    else:
-        joueur = collection.find()
-    reponse = ""
-    all_player = []
-
-    for item in joueur:
-
-        all_player.append(item)
-
-    if not all_player:
-        reponse = "Aucun joueur ne correspond a votre recherche"
-        return make_response(reponse)
-
-    #
-    # Pagination
-    #
-    if "page" in request.args:
-        # on recupere l'index de la pahge et on la passe en int
-        index = f"{request.args['page']}"
-        if str.isdigit(index):
-            index = int(index)
-        else:
-            reponse = "La page selectionner n'est pas valide"
-            return make_response(reponse)
-        #
-        # On verifie qu'on ne demande pas plus de champions que il y en a
-        #
-        if len(all_player) <= index * 5 - 1:
-            # Si oui, lors de la concatenation, on n'indique pas la derniere position
-            concenat_player = all_player[index * 5 - 5:]
-        else:
-            # Si non on ne prend que 5 champions
-            concenat_player = all_player[index * 5 - 5: index * 5]
-
-        # construction des reponse
-        for item in concenat_player:
-            reponse = reponse + "<p>" + item['name'] +" | "+item['title'] +"</p>"
-    else:
-        for item in all_player:
-            reponse = reponse + "<p>" + item['name'] +" | "+item['equipe'] +" | "+str(item['role']) + "</p>"
-    return make_response(reponse,200)
-
-"""
-    modifer un Joueur
-    params: Joueur (un json avec les information du joueur)
-    return : le json modifer
-"""
-@app.route("/modifyJoueur", methods=["PATCH"])
-def patch_player():
-    json = request.get_json()
-    index = f"{request.args['name']}"
-
-    joueur = collection.find({"name":index})
-
-    all_player = []
-    for item in joueur:
-        all_player.append(item)
-        print(len(all_player))
-    if len(all_player) > 0:
-
-        collection.find_one_and_replace({"name" : index}, json)
-
-        response = "Le joueur à bien été mise à jour."
-    else:
-        response = "Le joueur n'existe pas. Création du joueur?"
-    return make_response(response, 200)
-
-"""
-fonction cherchant a delete les joueur 
-param : nom des joueur 
-return un message nous disant que la suppression a eu lieu 
-"""
-
-@app.route("/deleteJoueur", methods=["DELETE"])
-def delete_joueur():
-    result= ""
-    index = f"{request.args['name']}"
-    joueur = collection.find()
-    validation = False
-    for item in joueur:
-        if index == item['name'] :
-            validation = True
-
-    if validation == True:
-        result = collection.delete_one({"name": index})
-        response = "Le joueur à bien été supprimer.\n"
-    else:
-        response = "le joueur choisi a déjà été supprimer ou n'exise pas"
-
-    return make_response(response, 200)
 
 if __name__ == '__main__':
     app.run(
