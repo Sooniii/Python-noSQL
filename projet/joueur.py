@@ -6,6 +6,7 @@ import pymongo
 client = pymongo.MongoClient(
     "mongodb+srv://m001-student:root@cluster0.oia9n.mongodb.net/Lol?retryWrites=true&w=majority")
 db = client.Lol
+
 collection_player = db.Player
 
 """
@@ -104,7 +105,6 @@ param : nom des joueur
 return un message nous disant que la suppression a eu lieu 
 """
 
-@app.route("/deleteJoueur", methods=["DELETE"])
 def delete_joueur():
     result= ""
     index = f"{request.args['name']}"

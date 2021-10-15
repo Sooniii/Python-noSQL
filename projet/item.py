@@ -1,16 +1,14 @@
 from flask import Flask
 from flask import request
 from flask import make_response
-import joueur
+
 import pymongo
 
-app = Flask(__name__)
 
 client = pymongo.MongoClient(
     "mongodb+srv://m001-student:root@cluster0.oia9n.mongodb.net/Lol?retryWrites=true&w=majority")
 db = client.Lol
-collection_champion = db.Champion
-collection_player = db.Player
+
 collection_item = db.Item
 
 """

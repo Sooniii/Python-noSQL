@@ -8,11 +8,10 @@ import joueur
 import item
 app = Flask(__name__)
 
-client = pymongo.MongoClient(
-    "mongodb+srv://m001-student:root@cluster0.oia9n.mongodb.net/Lol?retryWrites=true&w=majority")
 
-collection_player = db.Player
-
+#
+# Apelle des fonctions poour la collection: champion
+#
 @app.route("/champion", methods=["GET"])
 def get_champion():
     return champion.display_champion()
@@ -29,7 +28,9 @@ def add_champion():
 def modify_champion():
     return champion.patch_champion()
 
-
+#
+# Apelle des fonctions poour la collection: joueur
+#
 @app.route("/joueur", methods=["GET"])
 def get_joueur():
     return joueur.displayPlayer()
@@ -42,7 +43,13 @@ def modify_joueur():
 def delete_joueur():
     return joueur.delete_joueur()
 
+@app.route("/addJoueur", methods=["POST"])
+def add_Joueur():
+    return joueur.add_player()
 
+#
+# Apelle des fonctions poour la collection: item
+#
 @app.route("/item", methods=["GET"])
 def get_item():
     return item.displayItem()
@@ -55,6 +62,9 @@ def modify_item():
 def delete_item():
     return item.delete_Item()
 
+@app.route("/addItem", methods=["POST"])
+def add_item():
+    return item.add_item()
 
 
 
