@@ -1,9 +1,20 @@
+from flask import Flask
+from flask import request
+from flask import make_response
+import pymongo
+
+client = pymongo.MongoClient(
+    "mongodb+srv://m001-student:root@cluster0.oia9n.mongodb.net/Lol?retryWrites=true&w=majority")
+db = client.Lol
+collection_player = db.Player
+
 """
 Affiche la liste des joueur en fonction de criteres de recherches
 params: none
 return: la liste des joueur (String)
 
 """
+
 
 @app.route("/joueur", methods=["GET"])
 def displayPlayer():
